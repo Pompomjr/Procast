@@ -1,0 +1,46 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-30T08:05:00Z"},
+  "title": "Procast — maquette",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "Accueil", "is_interactive": true},
+    "C-Inscription.dc.html": {"x": 470, "y": 0, "w": 390, "h": 844, "title": "Candidat · Création du profil", "is_interactive": true},
+    "C-Capsules.dc.html": {"x": 940, "y": 0, "w": 390, "h": 844, "title": "Candidat · Mes capsules", "is_interactive": true},
+    "C-Tournage.dc.html": {"x": 1410, "y": 0, "w": 390, "h": 844, "title": "Candidat · Tournage", "is_interactive": true},
+    "C-Explore.dc.html": {"x": 1880, "y": 0, "w": 390, "h": 844, "title": "Candidat · Explorer", "is_interactive": true},
+    "C-Offre.dc.html": {"x": 2350, "y": 0, "w": 390, "h": 844, "title": "Candidat · Offre", "is_interactive": true},
+    "C-Candidatures.dc.html": {"x": 2820, "y": 0, "w": 390, "h": 844, "title": "Candidat · Candidatures", "is_interactive": true},
+    "C-Messages.dc.html": {"x": 3290, "y": 0, "w": 390, "h": 844, "title": "Candidat · Messages", "is_interactive": true},
+    "C-Profil.dc.html": {"x": 3760, "y": 0, "w": 390, "h": 844, "title": "Candidat · Mon profil", "is_interactive": true},
+    "E-Profil.dc.html": {"x": 0, "y": 1300, "w": 1440, "h": 1100, "title": "Entreprise · Page entreprise", "expand": "fill", "is_interactive": true},
+    "E-Publier.dc.html": {"x": 1520, "y": 1300, "w": 1440, "h": 1100, "title": "Entreprise · Publier une offre", "expand": "fill", "is_interactive": true},
+    "E-Candidatures.dc.html": {"x": 3040, "y": 1300, "w": 1440, "h": 1100, "title": "Entreprise · Candidatures reçues", "expand": "fill", "is_interactive": true},
+    "E-Fiche.dc.html": {"x": 0, "y": 2520, "w": 1440, "h": 1100, "title": "Entreprise · Fiche candidat", "expand": "fill", "is_interactive": true},
+    "E-Agenda.dc.html": {"x": 1520, "y": 2520, "w": 1440, "h": 1100, "title": "Entreprise · Agenda", "expand": "fill", "is_interactive": true},
+    "E-Base.dc.html": {"x": 3040, "y": 2520, "w": 1440, "h": 1100, "title": "Entreprise · Base de talents", "expand": "fill", "is_interactive": true}
+  },
+  "order": [
+    "Main.dc.html",
+    "C-Inscription.dc.html",
+    "C-Capsules.dc.html",
+    "C-Tournage.dc.html",
+    "C-Explore.dc.html",
+    "C-Offre.dc.html",
+    "C-Candidatures.dc.html",
+    "C-Messages.dc.html",
+    "C-Profil.dc.html",
+    "E-Profil.dc.html",
+    "E-Publier.dc.html",
+    "E-Candidatures.dc.html",
+    "E-Fiche.dc.html",
+    "E-Agenda.dc.html",
+    "E-Base.dc.html"
+  ],
+  "notes": {
+    "titreCandidat": {"x": 0, "y": -300, "text": "Candidat — appli mobile, vert clair", "kind": "title1", "maxW": 4150},
+    "titreEntreprise": {"x": 0, "y": 1000, "text": "Entreprise — application web, vert foncé", "kind": "title1", "maxW": 4480}
+  },
+  "designSystems": []
+}

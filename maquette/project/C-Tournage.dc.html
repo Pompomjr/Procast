@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Procast — Tournage</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B7A4C}a:hover{color:#0F2A20}
+button{font:inherit}
+:focus-visible{outline:2px solid #8FE3B4;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #17251F; font-family: Manrope, system-ui, sans-serif; color: #FFFFFF; display: flex; flex-direction: column">
+
+  <div aria-hidden="true" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center">
+    <svg width="280" height="364" viewBox="0 0 200 260" fill="none" style="margin-top: -40px">
+      <circle cx="100" cy="92" r="44" stroke="rgba(255,255,255,.24)" stroke-width="2"></circle>
+      <path d="M24 260c0-54 32-86 76-86s76 32 76 86" stroke="rgba(255,255,255,.24)" stroke-width="2" stroke-linecap="round"></path>
+      <text x="100" y="104" text-anchor="middle" font-family="Manrope, system-ui, sans-serif" font-size="34" font-weight="800" fill="rgba(255,255,255,.14)">JM</text>
+    </svg>
+    <span style="position: absolute; left: 32px; top: 168px; width: 28px; height: 28px; border-left: 2px solid rgba(255,255,255,.4); border-top: 2px solid rgba(255,255,255,.4); border-top-left-radius: 8px"></span>
+    <span style="position: absolute; right: 32px; top: 168px; width: 28px; height: 28px; border-right: 2px solid rgba(255,255,255,.4); border-top: 2px solid rgba(255,255,255,.4); border-top-right-radius: 8px"></span>
+    <span style="position: absolute; left: 32px; bottom: 216px; width: 28px; height: 28px; border-left: 2px solid rgba(255,255,255,.4); border-bottom: 2px solid rgba(255,255,255,.4); border-bottom-left-radius: 8px"></span>
+    <span style="position: absolute; right: 32px; bottom: 216px; width: 28px; height: 28px; border-right: 2px solid rgba(255,255,255,.4); border-bottom: 2px solid rgba(255,255,255,.4); border-bottom-right-radius: 8px"></span>
+  </div>
+
+  <header style="position: relative; display: flex; align-items: center; gap: 8px; padding: 12px 12px 0">
+    <a href="C-Capsules.dc.html" aria-label="Fermer et revenir à mes capsules" style="width: 44px; height: 44px; flex: none; border-radius: 999px; background: rgba(255,255,255,.14); color: #FFFFFF; text-decoration: none; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </a>
+    <div style="flex: 1; text-align: center; display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 13px; font-weight: 600; color: rgba(255,255,255,.72)">Capsule 4/5</span>
+      <h1 style="margin: 0; font-size: 18px; font-weight: 700">Mes langues</h1>
+    </div>
+    <span aria-hidden="true" style="width: 44px; flex: none"></span>
+  </header>
+
+  <div style="position: relative; padding: 16px 20px 0; display: flex; flex-direction: column; align-items: center; gap: 10px">
+    <sc-if value="{{enCours}}" hint-placeholder-val="{{ true }}">
+      <span role="status" style="display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(0,0,0,.35)">
+        <span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 999px; background: #D93A3A"></span>
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.06em">REC</span>
+        <span style="font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums">0:42 / 1:00</span>
+      </span>
+    </sc-if>
+    <sc-if value="{{enPause}}" hint-placeholder-val="{{ false }}">
+      <span role="status" style="display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(0,0,0,.35)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1"></rect><rect x="14" y="4" width="5" height="16" rx="1"></rect></svg>
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.06em">ARRÊTÉ</span>
+        <span style="font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums">0:42 / 1:00</span>
+      </span>
+    </sc-if>
+    <div role="progressbar" aria-label="Temps écoulé" aria-valuemin="0" aria-valuemax="60" aria-valuenow="42" style="width: 100%; height: 4px; border-radius: 999px; background: rgba(255,255,255,.2); overflow: hidden">
+      <div style="width: 70%; height: 100%; border-radius: 999px; background: #8FE3B4"></div>
+    </div>
+    <span style="font-size: 13px; font-weight: 500; color: rgba(255,255,255,.72)">Encore 18 secondes</span>
+  </div>
+
+  <div style="flex: 1"></div>
+
+  <section aria-label="Consigne guidée" style="position: relative; margin: 0 16px; padding: 16px; border-radius: 16px; background: rgba(15,42,32,.82); border: 1px solid rgba(255,255,255,.16)">
+    <div style="display: flex; align-items: center; justify-content: space-between">
+      <span style="font-size: 13px; font-weight: 700; color: #8FE3B4">Consigne</span>
+      <span style="font-size: 13px; font-weight: 600; color: rgba(255,255,255,.72)">{{faites}} sur 3 pistes</span>
+    </div>
+    <p style="margin: 6px 0 12px; font-size: 15px; font-weight: 600; line-height: 1.4">Dis dans quelles langues tu travailles et donne un exemple concret où tu les as utilisées.</p>
+    <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px">
+      <sc-for list="{{pistes}}" as="p" hint-placeholder-count="3">
+        <li>
+          <sc-if value="{{p.faite}}" hint-placeholder-val="{{ false }}">
+            <button type="button" role="checkbox" aria-checked="true" onClick="{{p.basculer}}" style="width: 100%; min-height: 44px; padding: 8px 10px; border: none; border-radius: 12px; background: transparent; color: rgba(255,255,255,.72); font-size: 13px; font-weight: 500; line-height: 1.4; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 10px">
+              <span aria-hidden="true" style="width: 22px; height: 22px; flex: none; border-radius: 999px; background: #8FE3B4; color: #0F2A20; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="text-decoration: line-through">{{p.texte}}</span>
+            </button>
+          </sc-if>
+          <sc-if value="{{p.courante}}" hint-placeholder-val="{{ true }}">
+            <button type="button" role="checkbox" aria-checked="false" aria-current="step" onClick="{{p.basculer}}" style="width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid rgba(143,227,180,.5); border-radius: 12px; background: rgba(143,227,180,.14); color: #FFFFFF; font-size: 15px; font-weight: 600; line-height: 1.4; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 10px">
+              <span aria-hidden="true" style="width: 22px; height: 22px; flex: none; box-sizing: border-box; border-radius: 999px; border: 2px solid #8FE3B4"></span>
+              <span>{{p.texte}}</span>
+            </button>
+          </sc-if>
+          <sc-if value="{{p.aVenir}}" hint-placeholder-val="{{ false }}">
+            <button type="button" role="checkbox" aria-checked="false" onClick="{{p.basculer}}" style="width: 100%; min-height: 44px; padding: 8px 10px; border: none; border-radius: 12px; background: transparent; color: #FFFFFF; font-size: 13px; font-weight: 500; line-height: 1.4; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 10px">
+              <span aria-hidden="true" style="width: 22px; height: 22px; flex: none; box-sizing: border-box; border-radius: 999px; border: 2px solid rgba(255,255,255,.5)"></span>
+              <span>{{p.texte}}</span>
+            </button>
+          </sc-if>
+        </li>
+      </sc-for>
+    </ul>
+    <sc-if value="{{resteUnePiste}}" hint-placeholder-val="{{ true }}">
+      <button type="button" onClick="{{suivante}}" style="margin-top: 8px; min-height: 44px; padding: 0 14px; border: none; border-radius: 999px; background: rgba(255,255,255,.14); color: #FFFFFF; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px">
+        Piste suivante
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+      </button>
+    </sc-if>
+  </section>
+
+  <div style="position: relative; padding: 16px 20px 0; min-height: 52px; box-sizing: border-box">
+    <sc-if value="{{enPause}}" hint-placeholder-val="{{ false }}">
+      <a href="C-Capsules.dc.html" style="height: 52px; border-radius: 999px; background: #8FE3B4; color: #0F2A20; font-size: 16px; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+        Garder cette prise
+      </a>
+    </sc-if>
+  </div>
+
+  <div style="position: relative; display: flex; align-items: flex-start; justify-content: space-between; padding: 16px 28px 28px">
+    <button type="button" style="width: 96px; padding: 0; border: none; background: transparent; color: #FFFFFF; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px">
+      <span style="width: 52px; height: 52px; border-radius: 999px; background: rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+      </span>
+      <span style="font-size: 13px; font-weight: 600">Recommencer</span>
+    </button>
+
+    <sc-if value="{{enCours}}" hint-placeholder-val="{{ true }}">
+      <button type="button" aria-label="Arrêter l'enregistrement" onClick="{{basculerEnregistrement}}" style="width: 80px; height: 80px; padding: 0; border-radius: 999px; border: 4px solid #FFFFFF; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center">
+        <span aria-hidden="true" style="width: 30px; height: 30px; border-radius: 8px; background: #D93A3A"></span>
+      </button>
+    </sc-if>
+    <sc-if value="{{enPause}}" hint-placeholder-val="{{ false }}">
+      <button type="button" aria-label="Reprendre l'enregistrement" onClick="{{basculerEnregistrement}}" style="width: 80px; height: 80px; padding: 0; border-radius: 999px; border: 4px solid #FFFFFF; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center">
+        <span aria-hidden="true" style="width: 60px; height: 60px; border-radius: 999px; background: #D93A3A"></span>
+      </button>
+    </sc-if>
+
+    <button type="button" style="width: 96px; padding: 0; border: none; background: transparent; color: #FFFFFF; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px">
+      <span style="width: 52px; height: 52px; border-radius: 999px; background: rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path><path d="M13 5h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5"></path><circle cx="12" cy="12" r="3"></circle><path d="m18 22-3-3 3-3"></path><path d="m6 2 3 3-3 3"></path></svg>
+      </span>
+      <span style="font-size: 13px; font-weight: 600; text-align: center; line-height: 1.3">Retourner la caméra</span>
+    </button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  state = { faites: [true, false, false], enregistre: true };
+
+  basculerPiste(i) {
+    const faites = this.state.faites.slice();
+    faites[i] = !faites[i];
+    this.setState({ faites: faites });
+  }
+
+  pisteSuivante() {
+    const faites = this.state.faites.slice();
+    const i = faites.indexOf(false);
+    if (i >= 0) {
+      faites[i] = true;
+      this.setState({ faites: faites });
+    }
+  }
+
+  basculerEnregistrement() {
+    this.setState({ enregistre: !this.state.enregistre });
+  }
+
+  renderVals() {
+    const self = this;
+    const textes = [
+      "Ta langue maternelle et tes langues de travail",
+      "Un exemple : une réunion, un client ou un dossier en néerlandais",
+      "Une langue que tu apprends ou veux améliorer"
+    ];
+    const faites = this.state.faites;
+    const courante = faites.indexOf(false);
+    const pistes = textes.map(function (texte, i) {
+      return {
+        texte: texte,
+        faite: faites[i],
+        courante: !faites[i] && i === courante,
+        aVenir: !faites[i] && i !== courante,
+        basculer: function () { self.basculerPiste(i); }
+      };
+    });
+    const nb = faites.filter(function (f) { return f; }).length;
+    return {
+      pistes: pistes,
+      faites: nb,
+      resteUnePiste: courante >= 0,
+      suivante: function () { self.pisteSuivante(); },
+      enCours: this.state.enregistre,
+      enPause: !this.state.enregistre,
+      basculerEnregistrement: function () { self.basculerEnregistrement(); }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Procast — Offre Veltra</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B7A4C}a:hover{color:#0F2A20}
+button{font:inherit}
+:focus-visible{outline:2px solid #1B7A4C;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F4F7F3; font-family: Manrope, system-ui, sans-serif; color: #0F2A20; display: flex; flex-direction: column">
+  <main style="flex: 1; overflow-y: auto; line-height: 1.4">
+    <header style="padding: 12px 20px 0 12px; display: flex; align-items: center; gap: 4px">
+      <a href="C-Explore.dc.html" aria-label="Retour aux offres" style="width: 44px; height: 44px; border-radius: 999px; display: flex; align-items: center; justify-content: center; color: #0F2A20; text-decoration: none">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+      </a>
+      <span style="font-size: 15px; font-weight: 600; color: #53655B">Offres</span>
+    </header>
+
+    <section style="padding: 8px 20px 0 20px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <span aria-hidden="true" style="flex: 0 0 44px; width: 44px; height: 44px; border-radius: 12px; background: #0D3B2C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">VI</span>
+        <div>
+          <p style="margin: 0; font-size: 15px; font-weight: 700">Veltra Industries</p>
+          <p style="margin: 0; font-size: 13px; font-weight: 500; color: #53655B">Équipements industriels · Evere · ~1 200 pers. en Belgique</p>
+        </div>
+      </div>
+      <h1 style="margin: 16px 0 0 0; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2">Ingénieur·e industriel·le — amélioration continue (M/F/X)</h1>
+      <p style="margin: 8px 0 0 0; font-size: 13px; font-weight: 500; color: #53655B">Publiée le 20 octobre 2026 par Sarah Lambert, Talent Acquisition</p>
+    </section>
+
+    <section aria-label="Capsules de l'entreprise" style="padding: 20px 20px 0 20px">
+      <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; background: #17251F; border-radius: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+        <span aria-hidden="true" style="position: absolute; font-size: 96px; font-weight: 800; color: rgba(255,255,255,.10); letter-spacing: -0.04em">VI</span>
+        <button type="button" aria-label="{{cap.lireLabel}}" style="position: relative; width: 56px; height: 56px; border-radius: 999px; border: 0; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="#0D3B2C"></path></svg></button>
+        <span style="position: absolute; left: 12px; bottom: 12px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,.14); color: #FFFFFF; font-size: 12px; font-weight: 700">{{cap.libelle}}</span>
+        <span style="position: absolute; right: 12px; bottom: 12px; color: #FFFFFF; font-size: 12px; font-weight: 700">1:00</span>
+      </div>
+
+      <div role="group" aria-label="Choisir une capsule" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 12px">
+        <sc-for list="{{capsules}}" as="c" hint-placeholder-count="4">
+          <button type="button" aria-pressed="{{c.pressed}}" onClick="{{c.choisir}}" style="{{c.style}}">
+            <span style="position: relative; display: flex; width: 100%; aspect-ratio: 16 / 9; background: #17251F; border-radius: 8px; align-items: center; justify-content: center">
+              <span style="width: 20px; height: 20px; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="9" height="9" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="#0D3B2C"></path></svg></span>
+              <span style="position: absolute; left: 5px; top: 3px; color: #FFFFFF; font-size: 11px; font-weight: 700">{{c.numero}}</span>
+            </span>
+            <span style="display: block; margin-top: 6px; font-size: 12px; font-weight: 700; color: #0F2A20; text-align: center">{{c.titre}}</span>
+          </button>
+        </sc-for>
+      </div>
+
+      <div style="margin-top: 12px; background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 16px">
+        <p style="margin: 0; font-size: 13px; font-weight: 600; color: #1B7A4C">{{cap.orateur}}</p>
+        <p style="margin: 6px 0 0 0; font-size: 15px; font-weight: 500">{{cap.resume}}</p>
+      </div>
+    </section>
+
+    <section style="padding: 24px 20px 0 20px">
+      <h2 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700">Conditions</h2>
+      <ul style="list-style: none; margin: 0; padding: 4px 16px; background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px">
+        <li style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #DDE5DF">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #1B7A4C; flex: 0 0 20px"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <span style="flex: 1; font-size: 13px; font-weight: 500; color: #53655B">Contrat</span>
+          <span style="font-size: 15px; font-weight: 700">CDI, temps plein</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #DDE5DF">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #1B7A4C; flex: 0 0 20px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span style="flex: 1; font-size: 13px; font-weight: 500; color: #53655B">Lieu</span>
+          <span style="font-size: 15px; font-weight: 700">Evere (Bruxelles)</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #DDE5DF">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #1B7A4C; flex: 0 0 20px"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span style="flex: 1; font-size: 13px; font-weight: 500; color: #53655B">Télétravail</span>
+          <span style="font-size: 15px; font-weight: 700">Hybride, 2 j/sem</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #DDE5DF">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #1B7A4C; flex: 0 0 20px"><rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
+          <span style="flex: 1; font-size: 13px; font-weight: 500; color: #53655B">Salaire</span>
+          <span style="font-size: 15px; font-weight: 700; text-align: right">3 900 – 4 500 € brut/mois<br><span style="font-size: 13px; font-weight: 500; color: #53655B">+ voiture de société</span></span>
+        </li>
+        <li style="display: flex; align-items: center; gap: 12px; padding: 12px 0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #1B7A4C; flex: 0 0 20px"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+          <span style="flex: 1; font-size: 13px; font-weight: 500; color: #53655B">Langues</span>
+          <span style="font-size: 15px; font-weight: 700">Français + néerlandais</span>
+        </li>
+      </ul>
+    </section>
+
+    <section style="padding: 24px 20px 0 20px">
+      <h2 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700">Ce que tu feras</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; font-weight: 500">
+        <li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: 0 0 24px; width: 24px; height: 24px; border-radius: 999px; background: #E3F6EB; color: #1B7A4C; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>Piloter les chantiers Lean de la ligne d'assemblage des compresseurs, de l'analyse des flux au suivi des gains.</li>
+        <li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: 0 0 24px; width: 24px; height: 24px; border-radius: 999px; background: #E3F6EB; color: #1B7A4C; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>Réduire les temps de changement de série (SMED) avec les chefs d'équipe de l'atelier.</li>
+        <li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: 0 0 24px; width: 24px; height: 24px; border-radius: 999px; background: #E3F6EB; color: #1B7A4C; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>Animer chaque matin le point de performance sur le plancher, en français et en néerlandais.</li>
+        <li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: 0 0 24px; width: 24px; height: 24px; border-radius: 999px; background: #E3F6EB; color: #1B7A4C; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>Former les opérateurs aux standards de travail et faire remonter leurs idées d'amélioration.</li>
+      </ul>
+    </section>
+
+    <section style="padding: 24px 20px 0 20px">
+      <h2 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700">Ton équipe</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <li style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">NB</span>
+          <span><span style="display: block; font-size: 15px; font-weight: 700">Nadia Benali</span><span style="display: block; font-size: 13px; font-weight: 500; color: #53655B">Responsable amélioration continue · ta future manager</span></span>
+        </li>
+        <li style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">PD</span>
+          <span><span style="display: block; font-size: 15px; font-weight: 700">Pieter De Smet</span><span style="display: block; font-size: 13px; font-weight: 500; color: #53655B">Ingénieur méthodes</span></span>
+        </li>
+        <li style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">EM</span>
+          <span><span style="display: block; font-size: 15px; font-weight: 700">Elodie Marchal</span><span style="display: block; font-size: 13px; font-weight: 500; color: #53655B">Cheffe d'atelier assemblage</span></span>
+        </li>
+        <li style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800">KW</span>
+          <span><span style="display: block; font-size: 15px; font-weight: 700">Koen Wouters</span><span style="display: block; font-size: 13px; font-weight: 500; color: #53655B">Technicien Lean</span></span>
+        </li>
+      </ul>
+    </section>
+
+    <section style="padding: 24px 20px 24px 20px">
+      <h2 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700">Valeurs</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+        <li style="padding: 6px 14px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; font-size: 13px; font-weight: 600">La sécurité d'abord</li>
+        <li style="padding: 6px 14px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; font-size: 13px; font-weight: 600">Franchise</li>
+        <li style="padding: 6px 14px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; font-size: 13px; font-weight: 600">Droit à l'erreur</li>
+        <li style="padding: 6px 14px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; font-size: 13px; font-weight: 600">5 jours de formation par an</li>
+        <li style="padding: 6px 14px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; font-size: 13px; font-weight: 600">Ancrage à Bruxelles</li>
+      </ul>
+    </section>
+  </main>
+
+  <div style="flex: 0 0 auto; padding: 12px 20px; background: #FFFFFF; border-top: 1px solid #DDE5DF">
+    <a href="C-Candidatures.dc.html" style="height: 52px; border-radius: 999px; background: #8FE3B4; color: #0F2A20; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 16px; font-weight: 600; text-decoration: none">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>Postuler avec mes capsules</a>
+    <p style="margin: 8px 0 0 0; font-size: 13px; font-weight: 500; color: #53655B; text-align: center">Tes 5 capsules + ton CV seront envoyés à Veltra</p>
+  </div>
+
+  <nav aria-label="Navigation principale" style="flex: 0 0 72px; height: 72px; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #DDE5DF; display: flex; align-items: center; padding: 0 8px">
+    <a href="C-Explore.dc.html" aria-current="page" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #0F2A20; font-size: 12px; font-weight: 700">
+      <span style="width: 56px; height: 32px; border-radius: 999px; background: #8FE3B4; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"></path></svg></span>Explorer</a>
+    <a href="C-Candidatures.dc.html" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #53655B; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg></span>Candidatures</a>
+    <a href="C-Messages.dc.html" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #53655B; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></span>Messages</a>
+    <a href="C-Profil.dc.html" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #53655B; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>Profil</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+var self = this;
+var s = this.state || {};
+var actif = typeof s.capsule === "number" ? s.capsule : 1;
+
+var liste = [
+  { numero: "1", titre: "Le lieu", orateur: "Présentée par Sarah Lambert, Talent Acquisition", resume: "Visite du site d'Evere : trois halls d'assemblage, le labo d'essais et les bureaux juste au-dessus de l'atelier. À dix minutes à pied de la gare de Bordet, avec un parking vélos couvert." },
+  { numero: "2", titre: "Le poste", orateur: "Présentée par Nadia Benali, responsable amélioration continue", resume: "Tu rejoins la ligne d'assemblage des compresseurs pour en améliorer les flux. On attend quelqu'un qui aime le terrain autant que les chiffres, et qui ose proposer." },
+  { numero: "3", titre: "L'équipe", orateur: "Présentée par Nadia Benali et Pieter De Smet", resume: "Nous sommes sept, entre ingénieurs méthodes et techniciens. Point debout chaque matin à 8 h 30 sur le plancher, et un vendredi par mois consacré aux idées de l'atelier." },
+  { numero: "4", titre: "Nos valeurs", orateur: "Présentée par Sarah Lambert, Talent Acquisition", resume: "La sécurité passe avant tout, on se dit les choses franchement et on a le droit de se tromper quand on teste une amélioration. Chacun a cinq jours de formation par an." }
+];
+
+var on = "padding: 4px 4px 6px 4px; border-radius: 12px; border: 2px solid #1B7A4C; background: #E3F6EB; cursor: pointer; min-height: 44px; display: block; width: 100%";
+var off = "padding: 4px 4px 6px 4px; border-radius: 12px; border: 2px solid #DDE5DF; background: #FFFFFF; cursor: pointer; min-height: 44px; display: block; width: 100%";
+
+var capsules = liste.map(function (c, i) {
+  return {
+    numero: c.numero,
+    titre: c.titre,
+    pressed: i === actif ? "true" : "false",
+    style: i === actif ? on : off,
+    choisir: function () { self.setState({ capsule: i }); }
+  };
+});
+
+var cur = liste[actif];
+return {
+  capsules: capsules,
+  cap: {
+    libelle: cur.numero + " · " + cur.titre,
+    orateur: cur.orateur,
+    resume: cur.resume,
+    lireLabel: "Lire la capsule « " + cur.titre + " » de Veltra Industries"
+  }
+};
+}
+}
+</script>
+</body>
+</html>

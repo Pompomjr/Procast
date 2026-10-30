@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Procast — Explorer</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B7A4C}a:hover{color:#0F2A20}
+button{font:inherit}
+:focus-visible{outline:2px solid #1B7A4C;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F4F7F3; font-family: Manrope, system-ui, sans-serif; color: #0F2A20; display: flex; flex-direction: column">
+  <main style="flex: 1; overflow-y: auto; line-height: 1.4">
+    <header style="padding: 20px 20px 0 20px">
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true" style="color: #2FBF71"><path d="M4 15V7a3 3 0 0 1 3-3h11" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path><path d="M36 25v8a3 3 0 0 1-3 3H22" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path><path d="M15 12.5v15l13-7.5z" fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"></path></svg>
+          <span style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: #0F2A20">ProCast</span>
+        </div>
+        <a href="C-Profil.dc.html" aria-label="Mon profil" style="width: 44px; height: 44px; border-radius: 999px; background: #E3F6EB; color: #0F2A20; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; text-decoration: none">JM</a>
+      </div>
+      <h1 style="margin: 20px 0 4px 0; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2">Bonjour Jacques</h1>
+      <p style="margin: 0; font-size: 15px; font-weight: 500; color: #53655B">Découvre les équipes en vidéo avant de postuler.</p>
+      <label style="margin-top: 16px; position: relative; display: block">
+        <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">Rechercher une offre</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; left: 16px; top: 14px; color: #53655B"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <input type="search" placeholder="Poste, entreprise, compétence…" style="box-sizing: border-box; width: 100%; height: 48px; padding: 0 16px 0 46px; border-radius: 999px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-family: Manrope, system-ui, sans-serif; font-size: 15px; font-weight: 500">
+      </label>
+    </header>
+
+    <section aria-label="Filtres" style="padding-top: 16px">
+      <div role="group" aria-label="Domaine" style="display: flex; gap: 8px; overflow-x: auto; padding: 0 20px 4px 20px">
+        <sc-for list="{{puces}}" as="p" hint-placeholder-count="6">
+          <button type="button" aria-pressed="{{p.pressed}}" onClick="{{p.choisir}}" style="{{p.style}}">{{p.nom}}</button>
+        </sc-for>
+      </div>
+      <div style="display: flex; gap: 8px; padding: 8px 20px 0 20px">
+        <label style="position: relative; flex: 1; display: block">
+          <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">Ville</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; left: 14px; top: 13px; color: #1B7A4C; pointer-events: none"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <select style="box-sizing: border-box; width: 100%; height: 44px; padding: 0 32px 0 40px; border-radius: 999px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-family: Manrope, system-ui, sans-serif; font-size: 13px; font-weight: 600; appearance: none; -webkit-appearance: none">
+            <option>Toute la Belgique</option>
+            <option>Bruxelles</option>
+            <option>Gand</option>
+            <option>Wavre</option>
+            <option>Liège</option>
+          </select>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 14px; top: 14px; color: #53655B; pointer-events: none"><path d="m6 9 6 6 6-6"></path></svg>
+        </label>
+        <label style="position: relative; flex: 1; display: block">
+          <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">Langue</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; left: 14px; top: 13px; color: #1B7A4C; pointer-events: none"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+          <select style="box-sizing: border-box; width: 100%; height: 44px; padding: 0 32px 0 40px; border-radius: 999px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-family: Manrope, system-ui, sans-serif; font-size: 13px; font-weight: 600; appearance: none; -webkit-appearance: none">
+            <option>Toutes les langues</option>
+            <option>Français</option>
+            <option>Néerlandais</option>
+            <option>Anglais</option>
+          </select>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 14px; top: 14px; color: #53655B; pointer-events: none"><path d="m6 9 6 6 6-6"></path></svg>
+        </label>
+      </div>
+    </section>
+
+    <section aria-label="Offres" style="padding: 20px 20px 24px 20px">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 700">Offres pour toi</h2>
+        <span style="font-size: 13px; font-weight: 500; color: #53655B">{{resultat}}</span>
+      </div>
+
+      <sc-if value="{{vide}}" hint-placeholder-val="{{ false }}">
+        <div style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 24px 20px; text-align: center">
+          <p style="margin: 0 0 4px 0; font-size: 15px; font-weight: 700">Pas encore d'offre dans ce domaine</p>
+          <p style="margin: 0; font-size: 13px; font-weight: 500; color: #53655B">On te prévient dès qu'une entreprise publie une offre qui correspond à ton profil.</p>
+        </div>
+      </sc-if>
+
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <sc-for list="{{offres}}" as="it" hint-placeholder-count="4">
+          <article style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 12px; box-shadow: 0 1px 2px rgba(15,42,32,.06)">
+            <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; background: #17251F; border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+              <span aria-hidden="true" style="position: absolute; font-size: 96px; font-weight: 800; color: rgba(255,255,255,.10); letter-spacing: -0.04em">{{it.initiales}}</span>
+              <span style="position: relative; width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="#0D3B2C"></path></svg></span>
+              <sc-if value="{{it.phare}}" hint-placeholder-val="{{ true }}">
+                <span style="position: absolute; left: 12px; top: 12px; padding: 4px 10px; border-radius: 999px; background: #8FE3B4; color: #0F2A20; font-size: 12px; font-weight: 700">Offre à la une</span>
+              </sc-if>
+              <span style="position: absolute; left: 12px; bottom: 12px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,.14); color: #FFFFFF; font-size: 12px; font-weight: 700">2 · Le poste</span>
+              <span style="position: absolute; right: 12px; bottom: 12px; color: #FFFFFF; font-size: 12px; font-weight: 700">1:00</span>
+            </div>
+            <div style="padding: 12px 4px 4px 4px">
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span aria-hidden="true" style="flex: 0 0 40px; width: 40px; height: 40px; border-radius: 10px; background: #0D3B2C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800">{{it.initiales}}</span>
+                <div style="flex: 1; min-width: 0">
+                  <p style="margin: 0; font-size: 15px; font-weight: 700">{{it.entreprise}}</p>
+                  <p style="margin: 0; font-size: 13px; font-weight: 500; color: #53655B">{{it.secteur}}</p>
+                </div>
+                <button type="button" aria-label="{{it.signetLabel}}" aria-pressed="{{it.signetPressed}}" onClick="{{it.enregistrer}}" style="flex: 0 0 44px; width: 44px; height: 44px; border-radius: 999px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #1B7A4C; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="{{it.signetFill}}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                </button>
+              </div>
+              <h3 style="margin: 12px 0 8px 0; font-size: 18px; font-weight: 700; line-height: 1.3">{{it.poste}}</h3>
+              <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 500; color: #53655B">
+                <li style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>{{it.lieu}}</li>
+                <li style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>{{it.contrat}}</li>
+                <li style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>{{it.langues}}</li>
+              </ul>
+              <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #DDE5DF; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #1B7A4C"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>4 capsules à voir</span>
+                <a href="C-Offre.dc.html" style="min-height: 44px; padding: 0 20px; border-radius: 999px; background: #8FE3B4; color: #0F2A20; display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 600; text-decoration: none">Voir l'offre<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+  </main>
+
+  <nav aria-label="Navigation principale" style="flex: 0 0 72px; height: 72px; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #DDE5DF; display: flex; align-items: center; padding: 0 8px">
+    <a href="C-Explore.dc.html" aria-current="page" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #0F2A20; font-size: 12px; font-weight: 700">
+      <span style="width: 56px; height: 32px; border-radius: 999px; background: #8FE3B4; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"></path></svg></span>Explorer</a>
+    <a href="C-Candidatures.dc.html" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #53655B; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg></span>Candidatures</a>
+    <a href="C-Messages.dc.html" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #53655B; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></span>Messages</a>
+    <a href="C-Profil.dc.html" style="flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-decoration: none; color: #53655B; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 32px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>Profil</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+var self = this;
+var s = this.state || {};
+var filtre = s.filtre || "Tous";
+var saved = s.saved || { celestra: true };
+
+var domaines = ["Tous", "Ingénierie", "Juridique", "IT", "Finance", "RH"];
+var puceOn = "flex: 0 0 auto; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #8FE3B4; background: #8FE3B4; color: #0F2A20; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap";
+var puceOff = "flex: 0 0 auto; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap";
+var puces = domaines.map(function (d) {
+  var actif = d === filtre;
+  return {
+    nom: d,
+    pressed: actif ? "true" : "false",
+    style: actif ? puceOn : puceOff,
+    choisir: function () { self.setState({ filtre: d }); }
+  };
+});
+
+var toutes = [
+  { id: "veltra", domaine: "Ingénierie", phare: true, initiales: "VI", entreprise: "Veltra Industries", secteur: "Équipements industriels · ~1 200 pers.", poste: "Ingénieur·e industriel·le — amélioration continue (M/F/X)", lieu: "Evere (Bruxelles) · hybride 2 j/sem", contrat: "CDI · 3 900 – 4 500 € brut/mois + voiture", langues: "Français + néerlandais" },
+  { id: "celestra", domaine: "Ingénierie", phare: false, initiales: "CP", entreprise: "Celestra Pharma", secteur: "Pharmaceutique", poste: "Ingénieur·e procédés — site de production (M/F/X)", lieu: "Wavre · sur site", contrat: "CDI · temps plein", langues: "Français + anglais" },
+  { id: "brightwave", domaine: "IT", phare: false, initiales: "BW", entreprise: "Brightwave", secteur: "Éditeur de logiciels", poste: "Ingénieur·e données de production (M/F/X)", lieu: "Gand · hybride 3 j/sem", contrat: "CDI · temps plein", langues: "Néerlandais + anglais" },
+  { id: "lumen", domaine: "Juridique", phare: false, initiales: "LL", entreprise: "Lumen Legal", secteur: "Cabinet d'avocats d'affaires", poste: "Expert·e technique — contentieux industriel (M/F/X)", lieu: "Bruxelles · hybride 2 j/sem", contrat: "CDI · temps plein", langues: "Français + anglais" }
+];
+
+var offres = toutes.filter(function (o) { return filtre === "Tous" || o.domaine === filtre; }).map(function (o) {
+  var on = !!saved[o.id];
+  return Object.assign({}, o, {
+    signetLabel: (on ? "Retirer des offres enregistrées : " : "Enregistrer l'offre : ") + o.entreprise,
+    signetPressed: on ? "true" : "false",
+    signetFill: on ? "currentColor" : "none",
+    enregistrer: function () {
+      var next = Object.assign({}, saved);
+      next[o.id] = !on;
+      self.setState({ saved: next });
+    }
+  });
+});
+
+var n = offres.length;
+return {
+  puces: puces,
+  offres: offres,
+  vide: n === 0,
+  resultat: n === 0 ? "Aucune offre" : (n === 1 ? "1 offre" : n + " offres")
+};
+}
+}
+</script>
+</body>
+</html>

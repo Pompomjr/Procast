@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Procast — Création du profil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B7A4C}a:hover{color:#0F2A20}
+button{font:inherit}
+input{font:inherit}
+:focus-visible{outline:2px solid #1B7A4C;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F4F7F3; font-family: Manrope, system-ui, sans-serif; color: #0F2A20; display: flex; flex-direction: column">
+
+  <header style="display: flex; align-items: center; gap: 8px; padding: 12px 20px 8px 12px">
+    <a href="Main.dc.html" aria-label="Retour à l'accueil" style="width: 44px; height: 44px; border-radius: 999px; display: flex; align-items: center; justify-content: center; color: #0F2A20; text-decoration: none">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+    </a>
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 13px; font-weight: 600; color: #53655B">Étape 1 sur 2 · Mon profil</span>
+      <div style="display: flex; gap: 4px" aria-hidden="true">
+        <span style="flex: 1; height: 4px; border-radius: 999px; background: #1B7A4C"></span>
+        <span style="flex: 1; height: 4px; border-radius: 999px; background: #DDE5DF"></span>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex: 1; overflow-y: auto; padding: 12px 20px 24px">
+    <h1 style="margin: 0; font-size: 26px; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em">Crée ton profil</h1>
+    <p style="margin: 8px 0 0; font-size: 15px; font-weight: 500; line-height: 1.4; color: #53655B">Les entreprises le voient à côté de tes capsules. Quelques minutes suffisent.</p>
+
+    <section aria-label="Photo de profil" style="display: flex; align-items: center; gap: 16px; margin-top: 24px; padding: 16px; background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px">
+      <div style="position: relative; width: 88px; height: 88px; flex: none; border-radius: 999px; background: #E3F6EB; border: 2px dashed #1B7A4C; display: flex; align-items: center; justify-content: center; color: #1B7A4C">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+        <button type="button" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #0F2A20; background: #FFFFFF; color: #0F2A20; font-size: 15px; font-weight: 600; cursor: pointer; align-self: flex-start">Ajouter une photo</button>
+        <span style="font-size: 13px; font-weight: 500; line-height: 1.4; color: #53655B">Visage bien visible, fond neutre. JPG ou PNG.</span>
+      </div>
+    </section>
+
+    <h2 style="margin: 28px 0 12px; font-size: 18px; font-weight: 700">Infos personnelles</h2>
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; gap: 12px">
+        <label style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+          <span style="font-size: 13px; font-weight: 600; color: #0F2A20">Nom</span>
+          <input type="text" name="nom" value="Moets" autocomplete="family-name" style="width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; border-radius: 12px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-size: 15px; font-weight: 600">
+        </label>
+        <label style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+          <span style="font-size: 13px; font-weight: 600; color: #0F2A20">Prénom</span>
+          <input type="text" name="prenom" value="Jacques" autocomplete="given-name" style="width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px; border-radius: 12px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-size: 15px; font-weight: 600">
+        </label>
+      </div>
+
+      <label style="display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 13px; font-weight: 600; color: #0F2A20">Date de naissance</span>
+        <span style="position: relative; display: block">
+          <input type="text" name="naissance" value="14/03/1994" inputmode="numeric" placeholder="JJ/MM/AAAA" style="width: 100%; box-sizing: border-box; height: 52px; padding: 0 44px 0 14px; border-radius: 12px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-size: 15px; font-weight: 600">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#53655B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 14px; top: 16px"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>
+        </span>
+      </label>
+
+      <label style="display: flex; flex-direction: column; gap: 6px">
+        <span style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; color: #0F2A20"><span>Lien LinkedIn</span><span style="font-weight: 500; color: #53655B">Facultatif</span></span>
+        <span style="position: relative; display: block">
+          <span aria-hidden="true" style="position: absolute; left: 12px; top: 14px; width: 24px; height: 24px; border-radius: 6px; background: #0F2A20; color: #FFFFFF; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center">in</span>
+          <input type="url" name="linkedin" value="" placeholder="linkedin.com/in/ton-profil" style="width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px 0 46px; border-radius: 12px; border: 1px dashed #53655B; background: #FFFFFF; color: #0F2A20; font-size: 15px; font-weight: 500">
+        </span>
+      </label>
+
+      <label style="display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 13px; font-weight: 600; color: #0F2A20">Ville</span>
+        <span style="position: relative; display: block">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#53655B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; left: 14px; top: 16px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <input type="text" name="ville" value="Bruxelles (Ixelles)" autocomplete="address-level2" style="width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px 0 44px; border-radius: 12px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-size: 15px; font-weight: 600">
+        </span>
+      </label>
+    </div>
+
+    <h2 style="margin: 28px 0 4px; font-size: 18px; font-weight: 700">Mon CV</h2>
+    <p style="margin: 0 0 12px; font-size: 13px; font-weight: 500; color: #53655B">Au format PDF. Les entreprises pourront le télécharger.</p>
+    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 14px; background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px">
+      <span style="width: 44px; height: 44px; flex: none; border-radius: 12px; background: #E3F6EB; color: #1B7A4C; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+      </span>
+      <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+        <span style="font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">CV_Jacques_Moets_2026.pdf</span>
+        <span style="display: flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: #1B7A4C">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          Importé · 2 pages · 238 Ko
+        </span>
+      </div>
+      <button type="button" style="height: 44px; padding: 0 14px; border-radius: 999px; border: none; background: transparent; color: #1B7A4C; font-size: 15px; font-weight: 600; cursor: pointer">Remplacer</button>
+    </div>
+
+    <h2 style="margin: 28px 0 4px; font-size: 18px; font-weight: 700">Domaine recherché</h2>
+    <p style="margin: 0 0 12px; font-size: 13px; font-weight: 500; color: #53655B">Choisis un ou deux domaines. Ils filtrent les offres que tu vois.</p>
+    <div role="group" aria-label="Domaine recherché" style="display: flex; flex-wrap: wrap; gap: 8px">
+      <sc-for list="{{domaines}}" as="d" hint-placeholder-count="5">
+        <sc-if value="{{d.actif}}" hint-placeholder-val="{{ true }}">
+          <button type="button" aria-pressed="true" onClick="{{d.basculer}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #8FE3B4; background: #8FE3B4; color: #0F2A20; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            {{d.label}}
+          </button>
+        </sc-if>
+        <sc-if value="{{d.inactif}}" hint-placeholder-val="{{ false }}">
+          <button type="button" aria-pressed="false" onClick="{{d.basculer}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20; font-size: 13px; font-weight: 600; cursor: pointer">{{d.label}}</button>
+        </sc-if>
+      </sc-for>
+    </div>
+
+  </main>
+
+  <footer style="padding: 12px 20px 24px; background: #F4F7F3; border-top: 1px solid #DDE5DF; display: flex; flex-direction: column; gap: 8px">
+    <a href="C-Capsules.dc.html" style="height: 52px; border-radius: 999px; background: #8FE3B4; color: #0F2A20; font-size: 16px; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px">
+      Continuer — mes capsules
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    </a>
+    <span style="text-align: center; font-size: 13px; font-weight: 500; color: #53655B">Tu pourras tout modifier plus tard depuis ton profil.</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  state = { choisis: ["Ingénieur"] };
+
+  basculer(label) {
+    const choisis = this.state.choisis.slice();
+    const i = choisis.indexOf(label);
+    if (i >= 0) {
+      choisis.splice(i, 1);
+    } else {
+      choisis.push(label);
+    }
+    this.setState({ choisis: choisis });
+  }
+
+  renderVals() {
+    const self = this;
+    const liste = ["Économie", "Juridique", "Ressources humaines", "IT", "Ingénieur"];
+    const domaines = liste.map(function (label) {
+      const actif = self.state.choisis.indexOf(label) >= 0;
+      return {
+        label: label,
+        actif: actif,
+        inactif: !actif,
+        basculer: function () { self.basculer(label); }
+      };
+    });
+    return { domaines: domaines };
+  }
+}
+</script>
+</body>
+</html>

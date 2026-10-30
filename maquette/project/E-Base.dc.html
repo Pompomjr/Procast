@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Procast — Base de talents</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1B7A4C}a:hover{color:#0F2A20}
+button{font:inherit}
+:focus-visible{outline:3px solid #1B7A4C;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F4F7F3; font-family: Manrope, system-ui, sans-serif; color: #0F2A20; line-height: 1.4">
+
+  <nav aria-label="Navigation entreprise" style="flex: 1 1 248px; max-width: 100%; box-sizing: border-box; background: #0D3B2C; padding: 24px 16px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; align-items: center; gap: 8px; padding: 0 8px">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true" style="color: #8FE3B4"><path d="M4 15V7a3 3 0 0 1 3-3h11" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path><path d="M36 25v8a3 3 0 0 1-3 3H22" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path><path d="M15 12.5v15l13-7.5z" fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"></path></svg>
+      <span style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF">ProCast</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <a href="E-Profil.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; color: #B5CEC2; font-size: 15px; font-weight: 600">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
+        Profil entreprise
+      </a>
+      <a href="E-Publier.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; color: #B5CEC2; font-size: 15px; font-weight: 600">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+        Publier une offre
+      </a>
+      <a href="E-Candidatures.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; color: #B5CEC2; font-size: 15px; font-weight: 600">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+        Candidatures
+      </a>
+      <a href="E-Base.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; background: #14503D; color: #FFFFFF; font-size: 15px; font-weight: 700">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Base de talents
+      </a>
+      <a href="E-Agenda.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; color: #B5CEC2; font-size: 15px; font-weight: 600">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        Agenda
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; color: #B5CEC2; font-size: 15px; font-weight: 600">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        Aide
+      </a>
+    </div>
+    <div style="margin-top: auto; display: flex; align-items: center; gap: 12px; padding: 16px 8px 0; border-top: 1px solid #14503D">
+      <span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 999px; background: #8FE3B4; color: #0F2A20; font-size: 14px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">SL</span>
+      <div style="min-width: 0">
+        <div style="font-size: 14px; font-weight: 700; color: #FFFFFF">Sarah Lambert</div>
+        <div style="font-size: 13px; font-weight: 500; color: #B5CEC2">Veltra Industries</div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 32px 40px">
+    <div style="max-width: 1100px; display: flex; flex-direction: column; gap: 24px">
+
+      <section aria-label="Fonction à venir" style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+        <span style="padding: 4px 12px; border-radius: 999px; background: #0D3B2C; color: #FFFFFF; font-size: 13px; font-weight: 600; flex-shrink: 0">Bientôt</span>
+        <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+          <p style="margin: 0; font-size: 15px; font-weight: 700">Bientôt — phase 2 : rechercher directement parmi les candidats qui ont rendu leur profil visible</p>
+          <p style="margin: 0; font-size: 13px; font-weight: 500; color: #53655B">En attendant, publiez une offre : les candidats viennent à vous avec leurs capsules. Ci-dessous, un aperçu de la fonction avec des profils d'exemple.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+          <a href="E-Publier.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600">Publier une offre</a>
+          <button type="button" onClick="{{ avertir }}" aria-pressed="{{avertiPresse}}" style="{{avertiStyle}}">{{avertiLabel}}</button>
+        </div>
+      </section>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+        <h1 style="margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.01em">Base de talents</h1>
+        <p style="margin: 0; font-size: 13px; font-weight: 500; color: #53655B">Seuls les candidats qui l'ont choisi apparaîtront ici.</p>
+      </div>
+
+      <section aria-label="Recherche" style="background: #FFFFFF; border: 1px solid #DDE5DF; border-radius: 16px; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <label for="r-texte" style="font-size: 13px; font-weight: 600">Rechercher un profil</label>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px">
+            <div style="position: relative; flex: 1 1 320px; min-width: 0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#53655B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; left: 14px; top: 12px"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input id="r-texte" type="search" placeholder="Métier, compétence ou diplôme — ex. Lean, juriste, Python" style="height: 44px; width: 100%; box-sizing: border-box; padding: 0 14px 0 44px; border: 1px solid #DDE5DF; border-radius: 999px; background: #FFFFFF; color: #0F2A20; font-family: inherit; font-size: 15px; font-weight: 500">
+            </div>
+            <button type="button" style="height: 44px; padding: 0 22px; border-radius: 999px; border: 0; background: #0D3B2C; color: #FFFFFF; font-size: 16px; font-weight: 600; cursor: pointer">Rechercher</button>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="r-domaine" style="font-size: 13px; font-weight: 600">Domaine</label>
+            <select id="r-domaine" style="height: 44px; width: 100%; box-sizing: border-box; padding: 0 12px; border: 1px solid #DDE5DF; border-radius: 12px; background: #FFFFFF; color: #0F2A20; font-family: inherit; font-size: 15px; font-weight: 500">
+              <option selected="">Tous les domaines</option>
+              <option>Ingénierie</option>
+              <option>IT</option>
+              <option>Économie &amp; finance</option>
+              <option>Juridique</option>
+              <option>Ressources humaines</option>
+            </select>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="r-ville" style="font-size: 13px; font-weight: 600">Ville</label>
+            <select id="r-ville" style="height: 44px; width: 100%; box-sizing: border-box; padding: 0 12px; border: 1px solid #DDE5DF; border-radius: 12px; background: #FFFFFF; color: #0F2A20; font-family: inherit; font-size: 15px; font-weight: 500">
+              <option selected="">Toute la Belgique</option>
+              <option>Bruxelles</option>
+              <option>Gand</option>
+              <option>Louvain</option>
+              <option>Liège</option>
+              <option>Charleroi</option>
+            </select>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="r-langues" style="font-size: 13px; font-weight: 600">Langues</label>
+            <select id="r-langues" style="height: 44px; width: 100%; box-sizing: border-box; padding: 0 12px; border: 1px solid #DDE5DF; border-radius: 12px; background: #FFFFFF; color: #0F2A20; font-family: inherit; font-size: 15px; font-weight: 500">
+              <option>Toutes</option>
+              <option selected="">FR + NL</option>
+              <option>FR + EN</option>
+              <option>NL + EN</option>
+              <option>FR + NL + EN</option>
+            </select>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="r-dispo" style="font-size: 13px; font-weight: 600">Disponibilité</label>
+            <select id="r-dispo" style="height: 44px; width: 100%; box-sizing: border-box; padding: 0 12px; border: 1px solid #DDE5DF; border-radius: 12px; background: #FFFFFF; color: #0F2A20; font-family: inherit; font-size: 15px; font-weight: 500">
+              <option selected="">Peu importe</option>
+              <option>Immédiate</option>
+              <option>Sous 1 mois</option>
+              <option>Sous 3 mois</option>
+            </select>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="r-exp" style="font-size: 13px; font-weight: 600">Années d'expérience</label>
+            <select id="r-exp" style="height: 44px; width: 100%; box-sizing: border-box; padding: 0 12px; border: 1px solid #DDE5DF; border-radius: 12px; background: #FFFFFF; color: #0F2A20; font-family: inherit; font-size: 15px; font-weight: 500">
+              <option selected="">Toutes</option>
+              <option>Moins de 2 ans</option>
+              <option>2 à 5 ans</option>
+              <option>5 à 10 ans</option>
+              <option>Plus de 10 ans</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 700">6 profils d'exemple</h2>
+        <span style="padding: 4px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DDE5DF; color: #53655B; font-size: 13px; font-weight: 600">Aperçu — données fictives</span>
+      </div>
+
+      <ul aria-label="Profils d'exemple" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; opacity: 0.85">
+        <sc-for list="{{profils}}" as="p" hint-placeholder-count="6">
+          <li style="background: #FFFFFF; border: 1px dashed #B5CEC2; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 12px">
+            <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; background: #17251F; border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+              <span aria-hidden="true" style="position: absolute; font-size: 96px; font-weight: 800; color: rgba(255,255,255,.10); letter-spacing: -0.04em">{{p.ini}}</span>
+              <span style="position: relative; width: 48px; height: 48px; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="#0D3B2C"></path></svg></span>
+              <span style="position: absolute; left: 12px; bottom: 12px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,.14); color: #FFFFFF; font-size: 12px; font-weight: 700">1 · Qui je suis</span>
+              <span style="position: absolute; right: 12px; bottom: 12px; color: #FFFFFF; font-size: 12px; font-weight: 700">1:00</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px">
+              <div style="font-size: 16px; font-weight: 700">{{p.nom}}<span style="font-weight: 500; color: #53655B">, {{p.age}}</span></div>
+              <div style="font-size: 15px; font-weight: 600">{{p.metier}}</div>
+              <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: #53655B">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                {{p.ville}}
+              </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; padding: 0 4px">
+              <span style="padding: 4px 10px; border-radius: 999px; background: #F4F7F3; border: 1px solid #DDE5DF; font-size: 13px; font-weight: 600">{{p.langues}}</span>
+              <span style="padding: 4px 10px; border-radius: 999px; background: #F4F7F3; border: 1px solid #DDE5DF; font-size: 13px; font-weight: 600">{{p.exp}}</span>
+              <span style="padding: 4px 10px; border-radius: 999px; background: #F4F7F3; border: 1px solid #DDE5DF; font-size: 13px; font-weight: 600">{{p.dispo}}</span>
+            </div>
+            <button type="button" onClick="{{ p.inviter }}" aria-pressed="{{p.presse}}" style="{{p.btnStyle}}">{{p.btnLabel}}</button>
+          </li>
+        </sc-for>
+      </ul>
+
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+renderVals() {
+const s = this.state || {};
+const invites = s.invites || {};
+const averti = s.averti === true;
+const base = [
+  { ini: "CD", nom: "Camille Dubois", age: "24 ans", metier: "Juriste junior", ville: "Liège → Bruxelles", langues: "FR · EN · NL", exp: "1 an d'expérience", dispo: "Disponible tout de suite" },
+  { ini: "TP", nom: "Thomas Peeters", age: "35 ans", metier: "Développeur back-end", ville: "Gand", langues: "NL · EN · FR", exp: "11 ans d'expérience", dispo: "Préavis de 3 mois" },
+  { ini: "IR", nom: "Isabelle Renard", age: "41 ans", metier: "En reconversion vers les RH", ville: "Bruxelles", langues: "FR · EN", exp: "15 ans d'expérience", dispo: "Sous 1 mois" },
+  { ini: "YE", nom: "Yassine El Amrani", age: "27 ans", metier: "Ingénieur industriel", ville: "Charleroi", langues: "FR · EN · NL", exp: "3 ans d'expérience", dispo: "Sous 1 mois" },
+  { ini: "LJ", nom: "Lotte Janssens", age: "29 ans", metier: "Ingénieure qualité", ville: "Louvain", langues: "NL · FR · EN", exp: "5 ans d'expérience", dispo: "Préavis de 2 mois" },
+  { ini: "SM", nom: "Sofia Martins", age: "26 ans", metier: "Analyste financière", ville: "Bruxelles", langues: "FR · EN", exp: "2 ans d'expérience", dispo: "Disponible tout de suite" }
+];
+const btn = "height: 44px; width: 100%; border-radius: 999px; font-size: 16px; font-weight: 600; cursor: pointer; ";
+const profils = base.map((p, i) => {
+  const fait = invites[i] === true;
+  return Object.assign({}, p, {
+    inviter: () => {
+      const next = Object.assign({}, (this.state && this.state.invites) || {});
+      next[i] = !next[i];
+      this.setState({ invites: next });
+    },
+    presse: fait ? "true" : "false",
+    btnLabel: fait ? "Invitation préparée" : "Inviter à postuler",
+    btnStyle: btn + (fait ? "border: 1px solid #DDE5DF; background: #E3F6EB; color: #1B7A4C" : "border: 0; background: #0D3B2C; color: #FFFFFF")
+  });
+});
+const bouton = "height: 44px; padding: 0 20px; border-radius: 999px; font-size: 16px; font-weight: 600; cursor: pointer; ";
+return {
+  profils: profils,
+  avertir: () => this.setState({ averti: !averti }),
+  avertiPresse: averti ? "true" : "false",
+  avertiLabel: averti ? "Vous serez prévenue au lancement" : "Me prévenir au lancement",
+  avertiStyle: bouton + (averti ? "border: 1px solid #DDE5DF; background: #E3F6EB; color: #1B7A4C" : "border: 1px solid #DDE5DF; background: #FFFFFF; color: #0F2A20")
+};
+}
+}
+</script>
+</body>
+</html>
